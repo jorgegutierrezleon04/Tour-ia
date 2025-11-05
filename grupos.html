@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>tour.ia — Grupos</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/grupos.js" defer></script>
+  <script src="/theme.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">tour.ia</div>
+      <nav class="main-nav">
+        <a href="/">Inicio</a>
+        <a href="/grupos.html">Grupos</a>
+        <a href="/planificador.html">Planificador</a>
+        <a href="/historial.html">Historial</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle" class="btn-ghost">Modo</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Viajes según grupo</h2>
+      <p class="muted">Selecciona una categoría para empezar (se abrirá el planificador con la categoría preseleccionada).</p>
+      <div class="groups-grid" id="groupsGridFull"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 tour.ia — Jorge Gutiérrez León</p>
+    </div>
+  </footer>
+</body>
+</html>

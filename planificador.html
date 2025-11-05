@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>tour.ia — Planificador</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/theme.js" defer></script>
+  <script src="/planificador.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">tour.ia</div>
+      <nav class="main-nav">
+        <a href="/">Inicio</a>
+        <a href="/grupos.html">Grupos</a>
+        <a href="/planificador.html">Planificador</a>
+        <a href="/historial.html">Historial</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle" class="btn-ghost">Modo</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Planificador</h2>
+      <div class="mode-switch">
+        <button id="modeChat" class="btn-ghost active">Chat</button>
+        <button id="modeForm" class="btn-ghost">Formulario</button>
+      </div>
+
+      <div id="chatMode" class="plan-section visible">
+        <div id="chatWindow" class="chat-window"></div>
+        <div class="chat-input">
+          <input id="chatInput" placeholder="Escribe tu mensaje al asistente..." />
+          <button id="sendChat" class="btn">Enviar</button>
+        </div>
+      </div>
+
+      <div id="formMode" class="plan-section">
+        <label>Destino<input id="destInput" type="text" placeholder="Ej: Lisboa, Portugal" /></label>
+        <label>Días<input id="daysInput" type="number" min="1" max="30" /></label>
+        <label>Presupuesto (opcional)<input id="budgetInput" type="text" placeholder="Ej: Bajo, medio, alto" /></label>
+        <label>Intereses<input id="interestsInput" type="text" placeholder="Ej: gastronomía, naturaleza" /></label>
+        <label>Grupo<select id="groupSelect">
+          <option value="">Ninguno</option>
+          <option value="familias">Familias</option>
+          <option value="parejas">Parejas</option>
+          <option value="estudiantes">Estudiantes</option>
+          <option value="solitario">Solitario</option>
+          <option value="despedida">Despedida</option>
+          <option value="erasmus">Erasmus</option>
+          <option value="luna_de_miel">Luna de miel</option>
+          <option value="negocios">Negocios</option>
+        </select></label>
+        <div class="actions"><button id="genPlan" class="btn">Generar plan (rápido)</button></div>
+        <div id="planResult" class="itinerary"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 tour.ia — Jorge Gutiérrez León</p>
+    </div>
+  </footer>
+</body>
+</html>
